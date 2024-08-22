@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>register</title>
+  <style>
+    form {
+      display: flex;
+      flex-flow: column wrap;
+      width: 400px;
+      padding: 30px 30px 70px;
+      margin: 30px auto;
+      border: 1px solid #ddd;
+    }
+
+    #id, #pw {
+      width: 250px;
+      height: 30px;
+      padding-left: 10px;
+      margin-bottom: 10px;
+    }
+
+    div {
+      margin-top: 15px;
+    }
+
+    .title {
+      font-weight: bold;
+      margin: 8px 0;
+    }
+
+    select {
+      width: 250px;
+      height: 30px;
+    }
+  </style>
+</head>
+
+<body>
+  <form>
+    <h1>Register</h1>
+    <label for="id" class="title">ID</label>
+    <input type="text" id="id" autofocus>
+    <label for="pw" class="title">PW</label>
+    <input type="password" id="pw">
+
+    <div>
+      <p class="title">GENDER</p>
+      <label><input type="radio" name="gender" value="female" checked>Female</label>
+      <label><input type="radio" name="gender" value="male">Male</label>
+    </div>
+
+    <div>
+      <p class="title">Language</p>
+      <select name="language">
+        <option value="JavaScript">JavaScript</option>
+        <option value="Java">Java</option>
+        <option value="PHP">PHP</option>
+        <option value="C">C</option>
+        <option value="C++">C++</option>
+        <option value="Python">Python</option>
+      </select>
+    </div>
+
+  </form>
+</body>
+
+</html>
