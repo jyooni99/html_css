@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Random Color</title>
+  <style>
+    #contain{
+      text-align: center;
+      padding: 300px;
+    }
+
+    #btn{
+      padding: 15px 60px;
+      cursor: pointer;
+      background-color: #fff;
+      border: none;
+      border-radius: 10px;
+      transition: 0.3s;
+    }
+
+    #btn:hover{
+      background-color: rgba(255, 255, 255, 0.5);
+    }
+
+    #text{
+      font-weight: bold;
+    }
+
+  </style>
+</head>
+
+<body>
+  <div id="contain">
+    <div class="box">
+      <p id="text">What's your favorite color</p>
+      <button id='btn'>Random Color</button>
+    </div>
+  </div>
+
+  <script>
+    const colorArr = ['#e6e6fa', '#fff0f5', '#add8e6', '#fffacd', '#e0ffff', '#f08080', '#90ee90', '#87cefa', '#20b2aa']; //컬러 리스트
+    contain.style.backgroundColor = colorArr[0]; //메인 배경화면
+
+    btn.onclick = function () {
+      let index = parseInt(Math.random() * colorArr.length) // 0 ~ 8까지의 정수
+      contain.style.backgroundColor = colorArr[index];
+      text.innerHTML = colorArr[index];
+      console.log (index);
+    }
+  </script>
