@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+<style>
+  input:enabled{
+    color: green;
+  }
+
+  input:disabled{
+    background-color: gray;
+    color: #fff;
+  }
+
+  /*input:checked일 때, 바로 다음에 오는 형제요소 label에 스타일 적용 */
+  input:checked + label{
+    background-color: aquamarine;
+    color: green;
+  }
+
+</style>
+<body>
+  <form>
+    <h2>enabeld와 disabled</h2>
+    <label for = "enabled">First input (enabled)</label>
+    <input type="text" id="enabled" value="enabled"><br><br>
+
+    <label for = "disabled">Second input (disabled)</label>
+    <input type="text" id="disabled" value="disabled" disabled><br><br>
+
+    <input type="submit" value="enabled submit">
+    <input type="submit" value="disabled submit" disabled><br><br>
+
+    <h2>checked</h2>
+    <input type="checkbox" id="checked" checked>
+    <label for ="checked">Checked</label>
+    <input type="checkbox" id="unchecked">
+    <label for = "unchecked">Unchecked</label>
+
+    <input type="radio" id="radio1" name="radio" checked> 
+    <label for = "radio1">radio1</label>
+    <input type="radio" id="radio2" name="radio">
+    <label for = "radio2">radio2</label>
+  </form>
+</body>
+</html>
