@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    dialog::backdrop{
+      background-color: aquamarine;
+      opacity: 0.5;
+    }
+  </style>
+</head>
+<body>
+  <button class="modal1">non-modal dialog열기</button>
+  <button class="modal2">modal 열기</button>
+  <dialog>
+    <span>안녕하세요</span>
+    <form>
+      <input type="text">
+      <button class="closebtn" formmethod="dialog">Close</button>
+      <button type="submit">Submit</button>
+    </form>
+  </dialog>
+  <script>
+    const dialog = document.querySelector('dialog');
+    const button1 = document.querySelector('.modal1');
+    const button2 = document.querySelector('.modal2');
+    const closebtn = document.querySelector('.closebtn');
+
+    //show는 대화 상자
+    button1.addEventListener('click', ()=>{
+      dialog.show();
+    })
+
+    //showModal은 modal
+    button2.addEventListener('click', ()=>{
+      dialog.showModal();
+    })
+
+    //close는 닫기
+    closebtn.addEventListener('clock', ()=>{
+      dialog.close();
+    })
+  </script>
+</body>
+</html>

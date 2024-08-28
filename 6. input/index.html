@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    .container{
+      border: 1px solid #000;
+      width: 200px;
+      height: 200px;
+      container-type: inline-size;
+      container-name: item-style;
+    }
+
+    .item{
+      width: 100px;
+      height: 100px;
+      background-color: lightblue;
+    }
+
+    /*뷰포트는 그대로! 컨테이너 사이즈에 따라 아이템의 스타일에 변화를 줌*/
+    @container item-style (max-width: 200px) {
+      .item{
+        background-color: lightgray;
+      }
+    }
+  </style>
+</head>
+<body>
+  <input type="range" min = "200" max="300" value="200" id="width" name="width" oninput="handleInput(event)">
+  <div class="container">
+    <div class="item"></div>
+  </div>
+  <script>
+    const container = document.querySelector(".container");
+    function handleInput(e) {
+      container.style.width = `${e.target.value}px`
+    }
+  </script>
+</body>
+</html>
