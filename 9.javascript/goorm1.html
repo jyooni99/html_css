@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <style>
+    body{
+      text-align: center;
+    }
+
+    form{
+      border: 1px solid #bbb;
+      padding: 20px 0 50px;
+    }
+
+    div{
+      margin: 20px 0;
+    }
+
+    button{
+      padding: 10px 30px;
+    }
+
+    #textArea{
+      margin-top: 50px;
+    }
+
+  </style>
+</head>
+<body>
+  <form>
+    <h1>n년 뒤 나이 계산</h1>
+    <div>
+      <label for="age">당신의 나이는?</label>
+      <input type="number" id="age">
+    </div>
+    <div>
+      <label for="age">몇 년 뒤의 나이를 알고 싶으신가요?</label>
+      <input type="number" id="years">
+    </div>
+    <button type="button" id="btn">계산하기</button>
+    <p id="textArea"></p>
+  </form>
+
+  <script>
+    let btn = document.getElementById('btn');
+
+    btn.addEventListener('click', ()=>{
+      let age = parseInt(document.getElementById('age').value);
+      let years = parseInt(document.getElementById('years').value);
+      let calc = age + years; 
+
+      document.getElementById('textArea').innerHTML = `${years}년 뒤, 당신은 ${calc}살 입니다.`
+    })
+  </script>
+</body>
+</html>
